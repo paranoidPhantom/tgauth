@@ -1,6 +1,21 @@
 # Changelog
 
 
+## v0.9.3
+
+[compare changes](https://undefined/undefined/compare/v0.9.2...v0.9.3)
+
+### 🏡 Chore
+
+- **release:** V0.9.1 (6739450)
+- **release:** V0.9.2 (fc559c1)
+- Update module description (d3f3aba)
+- Add defineNuxtPlugin to redirects.ts (055a90b)
+
+### ❤️ Contributors
+
+- Andrei <andrei.hudalla@outlook.com>
+
 ## v0.9.2
 
 [compare changes](https://undefined/undefined/compare/v0.9.2...v0.9.2)
