@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.9.2
+
+[compare changes](https://undefined/undefined/compare/v0.9.2...v0.9.2)
+
+### 🏡 Chore
+
+- **release:** V0.9.1 (6739450)
+
+### ❤️ Contributors
+
+- Andrei <andrei.hudalla@outlook.com>
+
 ## v0.9.1
 
 [compare changes](https://undefined/undefined/compare/v0.9.2...v0.9.1)
