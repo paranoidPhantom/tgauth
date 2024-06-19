@@ -1,4 +1,4 @@
-import { useCookie, useRoute } from 'nuxt/app'
+import { useCookie, useRoute, defineNuxtPlugin } from 'nuxt/app'
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.hook('app:beforeMount', () => {
