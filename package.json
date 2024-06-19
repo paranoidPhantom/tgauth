@@ -1,6 +1,6 @@
 {
 	"name": "tgauth",
-	"version": "0.9.0",
+	"version": "0.9.1",
 	"description": "A simple solution to add telegram auth button to your Nuxt app",
 	"repository": "@nuxtjs/tgauth",
 	"license": "MIT",
@@ -22,8 +22,8 @@
 		"dev": "nuxi dev playground",
 		"dev:build": "nuxi build playground",
 		"dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-		"release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
-		"lint": "eslint .",
+		"release": "bun lint && bun test && bun prepack && changelogen --release && bun publish && git push --follow-tags",
+		"lint": "eslint . --fix",
 		"test": "vitest run",
 		"test:watch": "vitest watch",
 		"test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit"
