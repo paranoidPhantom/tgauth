@@ -4,7 +4,7 @@ Get your module up and running quickly.
 Find and replace all on all files (CMD+SHIFT+F):
 - Name: tgauth
 - Package name: @paranoidphantom/tgauth
-- Description: A simple solution to add telegram auth button to your Nuxt app
+- Description: A simple solution to add telegram login button to your Nuxt app
 -->
 
 # tgauth
@@ -14,7 +14,7 @@ Find and replace all on all files (CMD+SHIFT+F):
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-A simple solution to add telegram auth button to your Nuxt app
+A simple solution to add telegram login button to your Nuxt app
 
 ## Features
 
