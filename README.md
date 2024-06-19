@@ -3,7 +3,7 @@ Get your module up and running quickly.
 
 Find and replace all on all files (CMD+SHIFT+F):
 - Name: tgauth
-- Package name: @nuxtjs/tgauth
+- Package name: @paranoidphantom/tgauth
 - Description: A simple solution to add telegram auth button to your Nuxt app
 -->
 
@@ -18,16 +18,16 @@ A simple solution to add telegram auth button to your Nuxt app
 
 ## Features
 
--   🚀 Provides a simple component for the login button
--   🔒 Adds a server service to validate user data
--   💾 Persists user data and provides a simple composable for accessing it
+- 🚀 **Provides a simple component for the login button**
+- 💾 **Persists user data and provides a simple composable for accessing it**
+- 🔒 Adds server middleware that validates user data (SOON)
 
 ## Quick Setup
 
 1. Install the module
 
 ```bash
-npx nuxi module add @nuxtjs/tgauth
+npx nuxi module add @paranoidphantom/tgauth
 ```
 
 2. Add the `TelegramAuth` component
@@ -81,11 +81,11 @@ That's it! You can now use telegram for user authentication in your app ✨
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/@nuxtjs/tgauth/latest.svg?style=flat&colorA=020420&colorB=00DC82
-[npm-version-href]: https://npmjs.com/package/@nuxtjs/tgauth
-[npm-downloads-src]: https://img.shields.io/npm/dm/@nuxtjs/tgauth.svg?style=flat&colorA=020420&colorB=00DC82
-[npm-downloads-href]: https://npmjs.com/package/@nuxtjs/tgauth
-[license-src]: https://img.shields.io/npm/l/@nuxtjs/tgauth.svg?style=flat&colorA=020420&colorB=00DC82
-[license-href]: https://npmjs.com/package/@nuxtjs/tgauth
+[npm-version-src]: https://img.shields.io/npm/v/@paranoidphantom/tgauth/latest.svg?style=flat&colorA=020420&colorB=00DC82
+[npm-version-href]: https://npmjs.com/package/@paranoidphantom/tgauth
+[npm-downloads-src]: https://img.shields.io/npm/dm/@paranoidphantom/tgauth.svg?style=flat&colorA=020420&colorB=00DC82
+[npm-downloads-href]: https://npmjs.com/package/@paranoidphantom/tgauth
+[license-src]: https://img.shields.io/npm/l/@paranoidphantom/tgauth.svg?style=flat&colorA=020420&colorB=00DC82
+[license-href]: https://npmjs.com/package/@paranoidphantom/tgauth
 [nuxt-src]: https://img.shields.io/badge/Nuxt-020420?logo=nuxt.js
 [nuxt-href]: https://nuxt.com
