@@ -1,6 +1,6 @@
 {
-	"name": "tgauth",
-	"version": "0.9.2",
+	"name": "@paranoidphantom/tgauth",
+	"version": "0.9.1",
 	"description": "A simple solution to add telegram auth button to your Nuxt app",
 	"repository": "@paranoidphantom/tgauth",
 	"license": "MIT",
