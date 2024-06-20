@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import { useCookie } from "nuxt/app";
+import { useCookie, useState } from "nuxt/app";
+import type { AuthData } from "./../types/authdata";
 
 const props = withDefaults(
 	defineProps<{
@@ -18,6 +19,12 @@ const props = withDefaults(
 		showUserPic: undefined,
 	},
 );
+
+const emit = defineEmits<{
+	login: [data: AuthData];
+	logout: [];
+}>();
+
 const root = ref<HTMLDivElement>();
 
 const handleMessageEvent = (event: MessageEvent) => {
@@ -29,11 +36,21 @@ const handleMessageEvent = (event: MessageEvent) => {
 			const global = useState("TG_AUTH_USER");
 			user.value = result;
 			global.value = result;
+			emit("login", result);
 		}
 	} catch (err) {
 		err;
 	}
 };
+
+const globalUser = useState<AuthData>("TG_AUTH_USER");
+watch(globalUser, (newValue: AuthData) => {
+	if (!newValue) {
+		emit("logout");
+	}
+});
+
+const doubledUp = ref(false);
 
 onMounted(() => {
 	if (root.value) {
@@ -58,6 +75,15 @@ onMounted(() => {
 		}
 
 		root.value.appendChild(telegramWidget);
+		telegramWidget.addEventListener("load", () => {
+			if (!telegramWidget.parentElement?.querySelector("iframe")) {
+				doubledUp.value = true;
+				console.warn(
+					"tgauth:",
+					"You have multiple login buttons for the same bot. Currently only one at a time is supported.",
+				);
+			}
+		});
 	}
 	window.addEventListener("message", handleMessageEvent);
 });
@@ -78,6 +104,38 @@ onUnmounted(() => {
 					}"
 				/>
 			</template>
+			<div class="double-warning" v-if="doubledUp">!</div>
 		</ClientOnly>
 	</div>
 </template>
+
+<style>
+.double-warning {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: relative;
+	background-color: black;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 1rem;
+	&::before {
+		content: "You have multiple login buttons for the same bot. Currently only one at a time is supported.";
+		position: absolute;
+		top: 110%;
+		left: 0;
+		width: 20rem;
+		padding: 0.5rem;
+		border-radius: 0.5rem;
+		background-color: black;
+		pointer-events: none;
+		opacity: 0;
+		transition: opacity 0.5s;
+		text-align: center;
+	}
+	&:hover::before {
+		opacity: 1;
+	}
+}
+</style>
