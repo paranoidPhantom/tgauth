@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.9.6
+
+[compare changes](https://github.com/paranoidphantom/tgauth/compare/v0.9.5...v0.9.6)
+
+### 🏡 Chore
+
+- Simplify demo ([877e28a](https://github.com/paranoidphantom/tgauth/commit/877e28a))
+
+### ❤️ Contributors
+
+- Andrei <andrei.hudalla@outlook.com>
+
 ## v0.9.5
 
 [compare changes](https://undefined/undefined/compare/v0.9.4...v0.9.5)
