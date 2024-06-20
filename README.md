@@ -14,13 +14,14 @@ Find and replace all on all files (CMD+SHIFT+F):
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
+> 😊 This is my first module so I'm sure there are some things that can be improved.
+
 A simple solution to add telegram login button to your Nuxt app
 
 ## Features
 
 - 🚀 **Provides a simple component for the login button**
 - 💾 **Persists user data and provides a simple composable for accessing it**
-- 🔒 Adds server middleware that validates user data (SOON)
 
 ## Quick Setup
 
@@ -42,11 +43,39 @@ npx nuxi module add @paranoidphantom/tgauth
 
 ```vue
 <script lang="ts" setup>
-const user = useTelegramUser();
+const { user } = useTelegramUser();
+
+console.log(user.value); // => { first_name: "John", last_name: "Doe", username: "johndoe", ...}
 </script>
 ```
 
-That's it! You can now use telegram for user authentication in your app ✨
+## Logout
+
+```vue
+<script lang="ts" setup>
+const { logout } = useTelegramUser();
+
+logout(); // => clears stored telegram user data
+</script>
+```
+
+## Listen for events
+
+```vue
+<template>
+	<TelegramAuth @login="(data) => console.log(data)" @logout="() => console.log('Logged out!')" bot="<bot username>" />
+</templaet>
+```
+
+## Use redirect mode
+
+> If the user is redirected to your nuxt app, useTelegramUser will be automatically populated with the returned data.
+
+```vue
+<template>
+	<TelegramAuth bot="<bot username>" auth-url="https://your-app.com/callback" />
+</templaet>
+```
 
 ## Contribution
 
