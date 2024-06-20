@@ -1,25 +1,23 @@
 <script lang="ts" setup>
-import { UAccordion } from "#components";
-
 const tguser = useTelegramUser();
-
-const list = [
-	{
-		label: "User data",
-		slot: "data",
-	},
-];
 </script>
 
 <template>
-	<div class="__demo p-8 flex flex-col items-center gap-8">
+	<div class="__demo">
 		<TelegramAuth bot="tbc_1_bot" />
-		<UAccordion :items="list">
-			<template #data>
-				<pre v-if="tguser">{{ tguser }}</pre>
-			</template>
-		</UAccordion>
+		<pre v-if="tguser">{{ tguser }}</pre>
 	</div>
 </template>
 
-<script setup></script>
+<style>
+:root {
+	color-scheme: dark;
+	.__demo {
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+	}
+}
+</style>

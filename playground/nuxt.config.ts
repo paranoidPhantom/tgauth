@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-	modules: ["../src/module", "@nuxt/ui"],
+	modules: ["../src/module"],
 	tgauth: {},
 	devServer: {
 		port: 80,
