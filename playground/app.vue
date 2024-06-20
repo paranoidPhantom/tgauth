@@ -21,17 +21,22 @@ const authenticated = (data: AuthData) => {
 		<UCard>
 			<div class="flex flex-col gap-4">
 				<TelegramAuth
+					bot="tbc_1_bot"
 					@login="authenticated"
 					@logout="toast.add({ title: 'Logged out!' })"
-					bot="tbc_1_bot"
 				/>
 				<Shiki
-					class="overflow-x-auto"
 					v-if="user"
+					class="overflow-x-auto"
 					lang="json"
 					:code="JSON.stringify(user, null, 2)"
 				/>
-				<UButton @click="logout" class="w-fit">Logout</UButton>
+				<UButton
+					class="w-fit"
+					@click="logout"
+				>
+					Logout
+				</UButton>
 			</div>
 		</UCard>
 		<UNotifications />
