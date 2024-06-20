@@ -1,4 +1,4 @@
-import { useCookie, useRoute, defineNuxtPlugin } from "nuxt/app";
+import { useCookie, useRoute, defineNuxtPlugin, useState } from "nuxt/app";
 
 export default defineNuxtPlugin((nuxtApp) => {
 	nuxtApp.hook("app:beforeMount", () => {
@@ -12,9 +12,12 @@ export default defineNuxtPlugin((nuxtApp) => {
 			"photo_url",
 			"username",
 		];
-		if (!extracting_keys.some(key => query[key] === undefined)) {
+		if (!extracting_keys.some((key: string) => query[key] === undefined)) {
+			const result = JSON.stringify(query);
 			const user = useCookie("TG_AUTH_USER");
-			user.value = JSON.stringify(query);
+			const global = useState("TG_AUTH_USER");
+			user.value = result;
+			global.value = result;
 		}
 	});
 });

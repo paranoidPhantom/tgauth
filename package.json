@@ -2,7 +2,10 @@
 	"name": "@paranoidphantom/tgauth",
 	"version": "0.9.5",
 	"description": "A simple solution to add telegram login button to your Nuxt app",
-	"repository": "@paranoidphantom/tgauth",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/paranoidphantom/tgauth"
+	},
 	"license": "MIT",
 	"type": "module",
 	"exports": {

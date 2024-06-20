@@ -1,5 +1,5 @@
-import { useCookie } from "nuxt/app";
+import { useCookie, useState } from "nuxt/app";
 
 export function useTelegramUser() {
-	return useCookie("TG_AUTH_USER");
+	return useState("TG_AUTH_USER", () => useCookie("TG_AUTH_USER"));
 }

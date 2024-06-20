@@ -24,12 +24,14 @@ const handleMessageEvent = (event: MessageEvent) => {
 	try {
 		const data = JSON.parse(event.data);
 		if (data.event === "auth_user") {
-			const { auth_data } = data;
+			const { auth_data: result } = data;
 			const user = useCookie("TG_AUTH_USER");
-			user.value = JSON.stringify(auth_data);
+			const global = useState("TG_AUTH_USER");
+			user.value = result;
+			global.value = result;
 		}
 	} catch (err) {
-		console.error(err);
+		err;
 	}
 };
 
