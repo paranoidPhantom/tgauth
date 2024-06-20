@@ -1,5 +1,9 @@
 export default defineNuxtConfig({
-	modules: ["../src/module"],
+	modules: ["../src/module", "@nuxt/ui", "nuxt-shiki"],
+	shiki: {
+		bundledThemes: ["github-dark-default"],
+		defaultTheme: "github-dark-default",
+	},
 	tgauth: {},
 	devServer: {
 		port: 80,
