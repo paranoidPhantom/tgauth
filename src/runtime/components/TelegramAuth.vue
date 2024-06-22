@@ -94,7 +94,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-	<div ref="root" class="tgauth">
+	<div
+		ref="root"
+		class="tgauth"
+	>
 		<ClientOnly>
 			<template #fallback>
 				<div
@@ -104,7 +107,12 @@ onUnmounted(() => {
 					}"
 				/>
 			</template>
-			<div v-if="doubledUp" class="double-warning">!</div>
+			<div
+				v-if="doubledUp"
+				class="double-warning"
+			>
+				!
+			</div>
 		</ClientOnly>
 	</div>
 </template>
