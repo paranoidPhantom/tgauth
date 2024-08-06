@@ -1,5 +1,26 @@
 # Changelog
 
+## v1.1.0
+
+[compare changes](https://github.com/paranoidphantom/tgauth/compare/v1.0.2...v1.1.0)
+
+### 🚀 Enhancements
+
+- Implement server middleware for validation ([75b6d2d](https://github.com/paranoidphantom/tgauth/commit/75b6d2d))
+- Implement fresh demo for validation ([ebdc650](https://github.com/paranoidphantom/tgauth/commit/ebdc650))
+
+### 🩹 Fixes
+
+- Add import ([4ed22b6](https://github.com/paranoidphantom/tgauth/commit/4ed22b6))
+
+### 🏡 Chore
+
+- Update README with instructions for new feature ([6b9967a](https://github.com/paranoidphantom/tgauth/commit/6b9967a))
+
+### ❤️ Contributors
+
+- Andrei Hudalla <andrei.hudalla@outlook.com>
+
 ## v1.0.2
 
 [compare changes](https://github.com/paranoidphantom/tgauth/compare/v1.0.1...v1.0.2)
