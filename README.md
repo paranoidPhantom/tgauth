@@ -59,6 +59,33 @@ logout(); // => clears stored telegram user data
 </script>
 ```
 
+## Validate user on server
+
+1. Add your bot token to .env (get from from [@BotFather](https://t.me/BotFather))
+```bash
+TG_BOT_TOKEN="<token>"
+```
+
+2. (Optional) Set a custom expiration time for the authentication object (default is 2 weeks, 0 for no expiration)
+```ts
+export default defineNuxtConfig({
+	// ...
+	tgauth: {
+		auth_expiration: 42777, // Expiration time in seconds
+	},
+	// ...
+});
+
+```
+
+3. Use the middleware to validate if the user is logged in and sent a legitimate auth object received from telegram
+```ts
+export default defineEventHandler(async (event) => {
+	const { valid } = event.context.tgauth;
+	// valid === true if data came from the telegram
+});
+```
+
 ## Listen for events
 
 ```vue
