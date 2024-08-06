@@ -14,6 +14,19 @@ const authenticated = (data: AuthData) => {
 		},
 	});
 };
+
+const userDataCookie = useCookie("TG_AUTH_USER");
+
+const userData = ref(JSON.stringify(user.value, null, 2));
+
+watch(userData, (newData) => {
+	userDataCookie.value = newData;
+});
+
+const { data } = await useFetch("/api/validate", {
+	method: "POST",
+	watch: [userDataCookie],
+});
 </script>
 
 <template>
@@ -21,22 +34,19 @@ const authenticated = (data: AuthData) => {
 		<UCard>
 			<div class="flex flex-col gap-4">
 				<TelegramAuth
-					bot="tbc_1_bot"
+					bot="localhost_756382_bot"
 					@login="authenticated"
 					@logout="toast.add({ title: 'Logged out!' })"
 				/>
-				<Shiki
-					v-if="user"
-					class="overflow-x-auto"
-					lang="json"
-					:code="JSON.stringify(user, null, 2)"
+				<MonacoEditor class="h-96" :options="{ theme: 'vs-dark' }" v-model="userData" lang="json" />
+				<UAlert
+					v-if="data?.valid"
+					color="green"
+					variant="subtle"
+					title="Data is from telegram (valid)"
 				/>
-				<UButton
-					class="w-fit"
-					@click="logout"
-				>
-					Logout
-				</UButton>
+				<UAlert v-else color="red" variant="subtle" title="Data is from telegram (invalid)" />
+				<UButton class="w-fit" @click="logout"> Logout </UButton>
 			</div>
 		</UCard>
 		<UNotifications />

@@ -3,7 +3,7 @@
 	"dependencies": {
 		"@nuxt/ui": "^2.17.0",
 		"nuxt": "^3.12.2",
-		"nuxt-shiki": "^0.3.0"
+		"nuxt-monaco-editor": "^1.2.9"
 	},
 	"private": true,
 	"scripts": {
@@ -13,6 +13,7 @@
 	},
 	"type": "module",
 	"devDependencies": {
+		"monaco-editor": "^0.50.0",
 		"sass": "^1.77.6"
 	}
 }

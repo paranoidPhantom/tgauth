@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-	modules: ["../src/module", "@nuxt/ui", "nuxt-shiki"],
+	modules: ["../src/module", "@nuxt/ui", "nuxt-monaco-editor"],
 	shiki: {
 		bundledThemes: ["github-dark-default"],
 		defaultTheme: "github-dark-default",
