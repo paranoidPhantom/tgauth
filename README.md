@@ -61,7 +61,7 @@ logout(); // => clears stored telegram user data
 
 ## Validate user on server
 
-1. Add your bot token to .env (get from from [@BotFather](https://t.me/BotFather))
+1. Add your bot token to .env (get one from [@BotFather](https://t.me/BotFather))
 ```bash
 TG_BOT_TOKEN="<token>"
 ```
