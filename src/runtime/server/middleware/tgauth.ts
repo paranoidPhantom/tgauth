@@ -45,8 +45,8 @@ export default async (event: H3Event): Promise<void> => {
 			// Return bool value is valid
 
 			const valid = Boolean(
-				hashGenerate === hash &&
-					(tgauth.auth_expiration === 0 || age < (tgauth.auth_expiration ?? 14 * 24 * 60 * 60)), // Invalidate after 14 days by default
+				hashGenerate === hash
+				&& (tgauth.auth_expiration === 0 || age < (tgauth.auth_expiration ?? 14 * 24 * 60 * 60)), // Invalidate after 14 days by default
 			);
 			event.context.tgauth.valid = valid;
 		}
