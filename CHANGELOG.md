@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.2.0
+
+[compare changes](https://github.com/paranoidphantom/tgauth/compare/v1.1.2...v1.2.0)
+
+### 🚀 Enhancements
+
+- Move away from middleware and use server service instead ([26fe312](https://github.com/paranoidphantom/tgauth/commit/26fe312))
+
+### 🏡 Chore
+
+- Document transition ([794d287](https://github.com/paranoidphantom/tgauth/commit/794d287))
+- Eslint ([02372b9](https://github.com/paranoidphantom/tgauth/commit/02372b9))
+
+### ❤️ Contributors
+
+- Andrei Hudalla ([@paranoidPhantom](http://github.com/paranoidPhantom))
+
 ## v1.1.2
 
 [compare changes](https://github.com/paranoidphantom/tgauth/compare/v1.1.1...v1.1.2)
