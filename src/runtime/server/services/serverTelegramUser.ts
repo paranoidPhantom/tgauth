@@ -2,7 +2,7 @@ import { createHmac, createHash } from "node:crypto";
 import { getCookie, type H3Event } from "h3";
 import { useRuntimeConfig } from "#imports";
 
-export const serverTgauthUser = async (
+export const serverTelegramUser = async (
 	event: H3Event,
 ): Promise<{
 	valid: boolean;
