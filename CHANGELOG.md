@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.1.2
+
+[compare changes](https://github.com/paranoidphantom/tgauth/compare/v1.1.1...v1.1.2)
+
+### 🩹 Fixes
+
+- Middleware not registering correctly ([c22a48c](https://github.com/paranoidphantom/tgauth/commit/c22a48c))
+
+### 🏡 Chore
+
+- Eslint ([51cc3f3](https://github.com/paranoidphantom/tgauth/commit/51cc3f3))
+
+### ❤️ Contributors
+
+- Andrei Hudalla ([@paranoidPhantom](http://github.com/paranoidPhantom))
+
 ## v1.1.1
 
 [compare changes](https://github.com/paranoidphantom/tgauth/compare/v1.1.0...v1.1.1)
