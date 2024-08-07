@@ -21,7 +21,7 @@ export const serverTgauthUser = async (
 		event.context._tgauthUser = {
 			valid: false,
 		};
-		
+
 		try {
 			const authObjectString = getCookie(event, "TG_AUTH_USER");
 			const { tgauth } = useRuntimeConfig();
@@ -63,8 +63,8 @@ export const serverTgauthUser = async (
 				// Return bool value is valid
 
 				const valid = Boolean(
-					hashGenerate === hash &&
-						(tgauth.auth_expiration === 0 || age < (tgauth.auth_expiration ?? 14 * 24 * 60 * 60)), // Invalidate after 14 days by default
+					hashGenerate === hash
+					&& (tgauth.auth_expiration === 0 || age < (tgauth.auth_expiration ?? 14 * 24 * 60 * 60)), // Invalidate after 14 days by default
 				);
 				event.context._tgauthUser.valid = valid;
 				event.context._tgauthUser.user = authObject;

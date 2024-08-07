@@ -1,11 +1,4 @@
-import {
-	defineNuxtModule,
-	createResolver,
-	addComponent,
-	addPlugin,
-	addImports,
-	addServerHandler,
-} from "@nuxt/kit";
+import { defineNuxtModule, createResolver, addComponent, addPlugin, addImports } from "@nuxt/kit";
 import { defu } from "defu";
 
 export interface ModuleOptions {
@@ -23,10 +16,10 @@ export default defineNuxtModule<ModuleOptions>({
 	},
 	setup(_options, _nuxt) {
 		const resolver = createResolver(import.meta.url);
-		const token =
-			process.env.TG_BOT_TOKEN ??
-			_options.token ??
-			(_nuxt.options.runtimeConfig.tgauth as ModuleOptions).token;
+		const token
+			= process.env.TG_BOT_TOKEN
+			?? _options.token
+			?? (_nuxt.options.runtimeConfig.tgauth as ModuleOptions).token;
 		if (!token) throw new Error("TG_BOT_TOKEN envirnoment variable is not set");
 		else
 			_nuxt.options.runtimeConfig.tgauth = defu(
@@ -35,9 +28,9 @@ export default defineNuxtModule<ModuleOptions>({
 					token,
 				},
 			);
-		const expiration =
-			_options.auth_expiration ??
-			(_nuxt.options.runtimeConfig.tgauth as ModuleOptions).auth_expiration;
+		const expiration
+			= _options.auth_expiration
+			?? (_nuxt.options.runtimeConfig.tgauth as ModuleOptions).auth_expiration;
 		if (expiration)
 			_nuxt.options.runtimeConfig.tgauth = defu(
 				_nuxt.options.runtimeConfig.tgauth as ModuleOptions,
