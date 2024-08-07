@@ -1,7 +1,8 @@
 import { createHmac, createHash } from "node:crypto";
 import { getCookie, type H3Event } from "h3";
+import { useRuntimeConfig, defineEventHandler } from "#imports";
 
-export default async (event: H3Event): Promise<void> => {
+export default defineEventHandler(async (event: H3Event): Promise<void> => {
 	event.context.tgauth = event.context.tgauth ?? {};
 	event.context.tgauth.valid = false;
 	try {
@@ -49,8 +50,9 @@ export default async (event: H3Event): Promise<void> => {
 				&& (tgauth.auth_expiration === 0 || age < (tgauth.auth_expiration ?? 14 * 24 * 60 * 60)), // Invalidate after 14 days by default
 			);
 			event.context.tgauth.valid = valid;
+			event.context.tgauth.user = authObject;
 		}
 	} catch (error) {
-		console.error("Error in telegram auth validation:", error);
+		console.warn("Telegram validation error:", error.message);
 	}
-};
+});
