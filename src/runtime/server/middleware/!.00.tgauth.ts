@@ -2,7 +2,7 @@ import { createHmac, createHash } from "node:crypto";
 import { getCookie, type H3Event } from "h3";
 import { useRuntimeConfig, defineEventHandler } from "#imports";
 
-export default defineEventHandler(async (event: H3Event): Promise<void> => {
+export default defineEventHandler(async (event: H3Event) => {
 	event.context.tgauth = event.context.tgauth ?? {};
 	event.context.tgauth.valid = false;
 	try {
