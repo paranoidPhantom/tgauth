@@ -81,8 +81,9 @@ export default defineNuxtConfig({
 3. Use the middleware to validate if the user is logged in and sent a legitimate auth object received from telegram
 ```ts
 export default defineEventHandler(async (event) => {
-	const { valid } = event.context.tgauth;
+	const { valid, user } = event.context.tgauth;
 	// valid === true if data came from the telegram
+	// user is defined if valid === true and contains user data
 });
 ```
 
