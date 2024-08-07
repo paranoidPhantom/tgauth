@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.2.1
+
+[compare changes](https://github.com/paranoidphantom/tgauth/compare/v1.2.0...v1.2.1)
+
+### 🩹 Fixes
+
+- Export server service ([105b802](https://github.com/paranoidphantom/tgauth/commit/105b802))
+
+### ❤️ Contributors
+
+- Andrei Hudalla ([@paranoidPhantom](http://github.com/paranoidPhantom))
+
 ## v1.2.0
 
 [compare changes](https://github.com/paranoidphantom/tgauth/compare/v1.1.2...v1.2.0)
