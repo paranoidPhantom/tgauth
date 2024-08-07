@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.1.1
+
+[compare changes](https://github.com/paranoidphantom/tgauth/compare/v1.1.0...v1.1.1)
+
+### 🩹 Fixes
+
+- Typo in README ([ea5595e](https://github.com/paranoidphantom/tgauth/commit/ea5595e))
+- Incorrect middleware registration and startup failure ([e1ca715](https://github.com/paranoidphantom/tgauth/commit/e1ca715))
+
+### 🏡 Chore
+
+- Eslint ([60893ac](https://github.com/paranoidphantom/tgauth/commit/60893ac))
+- Demonstrate new user property in tgauth context ([9a23d8d](https://github.com/paranoidphantom/tgauth/commit/9a23d8d))
+
+### ❤️ Contributors
+
+- Andrei Hudalla ([@paranoidPhantom](http://github.com/paranoidPhantom))
+
 ## v1.1.0
 
 [compare changes](https://github.com/paranoidphantom/tgauth/compare/v1.0.2...v1.1.0)
