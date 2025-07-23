@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.2.2
+
+[compare changes](https://github.com/paranoidphantom/tgauth/compare/v1.2.0...v1.2.2)
+
+### 🩹 Fixes
+
+- Export server service ([105b802](https://github.com/paranoidphantom/tgauth/commit/105b802))
+- Make bot token variable optional ([0269bb2](https://github.com/paranoidphantom/tgauth/commit/0269bb2))
+
+### 🏡 Chore
+
+- **release:** V1.2.1 ([a6178c8](https://github.com/paranoidphantom/tgauth/commit/a6178c8))
+- Add forgotten license ([21311b0](https://github.com/paranoidphantom/tgauth/commit/21311b0))
+- Update deps ([9362994](https://github.com/paranoidphantom/tgauth/commit/9362994))
+
+### ❤️ Contributors
+
+- Andrei Hudalla ([@paranoidPhantom](http://github.com/paranoidPhantom))
+
 ## v1.2.1
 
 [compare changes](https://github.com/paranoidphantom/tgauth/compare/v1.2.0...v1.2.1)
