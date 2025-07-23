@@ -19,7 +19,7 @@ export default defineNuxtModule<ModuleOptions>({
 		const token
 			= process.env.TG_BOT_TOKEN
 			?? _options.token
-			?? (_nuxt.options.runtimeConfig.tgauth as ModuleOptions).token;
+			?? (_nuxt.options.runtimeConfig.tgauth as ModuleOptions)?.token;
 		if (token) {
 			_nuxt.options.runtimeConfig.tgauth = defu(
 				_nuxt.options.runtimeConfig.tgauth as ModuleOptions,
