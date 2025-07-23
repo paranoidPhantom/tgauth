@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.2.3
+
+[compare changes](https://github.com/paranoidphantom/tgauth/compare/v1.2.2...v1.2.3)
+
+### 🩹 Fixes
+
+- Module param not actually optional ([777d6d9](https://github.com/paranoidphantom/tgauth/commit/777d6d9))
+
+### ❤️ Contributors
+
+- Andrei Hudalla ([@paranoidPhantom](http://github.com/paranoidPhantom))
+
 ## v1.2.2
 
 [compare changes](https://github.com/paranoidphantom/tgauth/compare/v1.2.0...v1.2.2)
