@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.2.4
+
+[compare changes](https://github.com/paranoidphantom/tgauth/compare/v1.2.3...v1.2.4)
+
+### 🩹 Fixes
+
+- Incorrect request-access prop handling dquote> resolves #1 ([#1](https://github.com/paranoidphantom/tgauth/issues/1))
+
+### 🏡 Chore
+
+- Remove test from release script ([8022713](https://github.com/paranoidphantom/tgauth/commit/8022713))
+
+### ❤️ Contributors
+
+- Andrei Hudalla ([@paranoidPhantom](http://github.com/paranoidPhantom))
+
 ## v1.2.3
 
 [compare changes](https://github.com/paranoidphantom/tgauth/compare/v1.2.2...v1.2.3)
