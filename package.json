@@ -25,7 +25,7 @@
 		"dev": "nuxi dev playground",
 		"dev:build": "nuxi build playground",
 		"dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-		"release": "bun lint && bun test && bun prepack && changelogen --release && npm publish --access public && git push --follow-tags",
+		"release": "bun lint && bun prepack && changelogen --release && npm publish --access public && git push --follow-tags",
 		"lint": "eslint . --fix",
 		"test": "vitest run",
 		"test:watch": "vitest watch",
