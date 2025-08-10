@@ -67,8 +67,8 @@ onMounted(() => {
 		if (props.borderRadius !== undefined) {
 			telegramWidget.setAttribute("data-radius", String(props.borderRadius));
 		}
-		if (props.requestMessagingAccess === false) {
-			telegramWidget.setAttribute("data-request-access", String(props.requestMessagingAccess));
+		if (props.requestMessagingAccess) {
+			telegramWidget.setAttribute("data-request-access", "write");
 		}
 		if (props.showUserPic === false) {
 			telegramWidget.setAttribute("data-show-userpick", "false");
