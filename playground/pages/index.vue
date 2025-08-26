@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import type { AuthData } from "../src/runtime/types/authdata";
+import type { TelegramUser } from "../../src/module";
 
 const { user, logout } = useTelegramUser();
 const toast = useToast();
 
-const authenticated = (data: AuthData) => {
+const authenticated = (data: TelegramUser) => {
 	toast.add({
 		title: `Authenticated as ${data.first_name} ${data.last_name}!`,
 		description: `a.k.a. @${data.username}`,
@@ -38,30 +38,15 @@ const { data } = await useFetch("/api/validate", {
 					@login="authenticated"
 					@logout="toast.add({ title: 'Logged out!' })"
 				/>
-				<MonacoEditor
-					v-model="userData"
-					class="h-96"
-					:options="{ theme: 'vs-dark' }"
-					lang="json"
-				/>
+				<MonacoEditor v-model="userData" class="h-96" :options="{ theme: 'vs-dark' }" lang="json" />
 				<UAlert
 					v-if="data?.valid"
 					color="green"
 					variant="subtle"
 					title="Data is from telegram (valid)"
 				/>
-				<UAlert
-					v-else
-					color="red"
-					variant="subtle"
-					title="Data is from telegram (invalid)"
-				/>
-				<UButton
-					class="w-fit"
-					@click="logout"
-				>
-					Logout
-				</UButton>
+				<UAlert v-else color="red" variant="subtle" title="Data is not from telegram (invalid)" />
+				<UButton class="w-fit" @click="logout"> Logout </UButton>
 			</div>
 		</UCard>
 		<UNotifications />
