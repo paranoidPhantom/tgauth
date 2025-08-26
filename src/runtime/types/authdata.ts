@@ -1,4 +1,4 @@
-interface TelegramUser {
+export interface TelegramUser {
 	auth_date: string;
 	first_name: string;
 	last_name: string;
