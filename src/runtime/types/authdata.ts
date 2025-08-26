@@ -8,4 +8,4 @@ export interface TelegramUser {
 	username: string;
 }
 
-export type AuthData = Telegram | null;
+export type AuthData = TelegramUser | null;
