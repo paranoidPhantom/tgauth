@@ -38,15 +38,30 @@ const { data } = await useFetch("/api/validate", {
 					@login="authenticated"
 					@logout="toast.add({ title: 'Logged out!' })"
 				/>
-				<MonacoEditor v-model="userData" class="h-96" :options="{ theme: 'vs-dark' }" lang="json" />
+				<MonacoEditor
+					v-model="userData"
+					class="h-96"
+					:options="{ theme: 'vs-dark' }"
+					lang="json"
+				/>
 				<UAlert
 					v-if="data?.valid"
 					color="green"
 					variant="subtle"
 					title="Data is from telegram (valid)"
 				/>
-				<UAlert v-else color="red" variant="subtle" title="Data is not from telegram (invalid)" />
-				<UButton class="w-fit" @click="logout"> Logout </UButton>
+				<UAlert
+					v-else
+					color="red"
+					variant="subtle"
+					title="Data is not from telegram (invalid)"
+				/>
+				<UButton
+					class="w-fit"
+					@click="logout"
+				>
+					Logout
+				</UButton>
 			</div>
 		</UCard>
 		<UNotifications />
