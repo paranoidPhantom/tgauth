@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.2.5
+
+[compare changes](https://github.com/paranoidphantom/tgauth/compare/v1.2.4...v1.2.5)
+
+### 🩹 Fixes
+
+- **playground:** Typing and typo ([c9143e2](https://github.com/paranoidphantom/tgauth/commit/c9143e2))
+- Export TelegramUser type at module level ([0b5f68d](https://github.com/paranoidphantom/tgauth/commit/0b5f68d))
+- Type usage ([17fb98b](https://github.com/paranoidphantom/tgauth/commit/17fb98b))
+
+### 🎨 Styles
+
+- Eslint ([13ff63c](https://github.com/paranoidphantom/tgauth/commit/13ff63c))
+- Eslint ([e0d49a6](https://github.com/paranoidphantom/tgauth/commit/e0d49a6))
+
+### ❤️ Contributors
+
+- Andrei Hudalla ([@paranoidPhantom](http://github.com/paranoidPhantom))
+
 ## v1.2.4
 
 [compare changes](https://github.com/paranoidphantom/tgauth/compare/v1.2.3...v1.2.4)
